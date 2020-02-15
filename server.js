@@ -6,8 +6,6 @@ const { log, ExpressAPILogMiddleware } = require("@rama41222/node-logger");
 var arguments = process.argv.splice(2);
 var fs = require("fs");
 var ini = require("ini");
-
-// var app = express();
 var morgan = require("morgan");
 var multiparty = require("connect-multiparty");
 var multipartyMiddleware = multiparty();
@@ -18,6 +16,7 @@ var cookieParser = require("cookie-parser");
 var session = require("express-session");
 var passport = require("passport");
 var flash = require("connect-flash");
+var bcrypt = require("bcrypt");
 
 const config = {
   name: "sample-express-app",
